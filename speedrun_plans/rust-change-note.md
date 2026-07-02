@@ -1,7 +1,8 @@
 # Why the engine change belongs in Rust, not Python
 
 > One-page note for the Wednesday hand-in (spec §7a item 3 / PRD §6.4). Describes the
-> change as actually built and tested (7 Rust unit tests + 2 Python tests passing).
+> change as actually built and tested (11 Rust unit tests + 3 Python tests passing;
+> re-verified 2026-07-01 at commit 4c6087335).
 
 ## The change, in one line
 

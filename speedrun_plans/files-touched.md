@@ -1,7 +1,8 @@
 # Upstream files touched + merge difficulty
 
 > **Wednesday hand-in (spec §7a item 4 / PRD §6.5).** Reflects the integrated FR-3
-> engine change as built and tested (7 Rust unit tests + 2 Python tests passing).
+> engine change as built and tested (11 Rust unit tests + 3 Python tests passing;
+> re-verified 2026-07-01).
 
 ## Summary
 
@@ -19,9 +20,9 @@
 | File / dir                      | What it is                                                                                                                                                         |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `proto/anki/concepts.proto`     | New `ConceptsService` (+ empty `BackendConceptsService`) with `ConceptAwareQueue` and `ConceptMastery` RPCs and their messages. Auto-discovered by the proto glob. |
-| `rslib/src/concepts/mod.rs`     | NTR engine: tag→concept matching, deterministic `weakness`/`NTR`, `compute_mastery`, `order_by_ntr`, and the set-based collection loader. 5 unit tests.            |
-| `rslib/src/concepts/service.rs` | Implements the generated `ConceptsService` trait on `Collection`; read-only queue re-ordering + mastery query. 2 unit tests (incl. read-only/undo assertion).      |
-| `pylib/tests/test_concepts.py`  | 1 Python test file, 2 tests: calls both RPCs through the backend on an in-memory collection; asserts undo state untouched.                                         |
+| `rslib/src/concepts/mod.rs`     | NTR engine: tag→concept matching, deterministic `weakness`/`NTR`, `compute_mastery`, `order_by_ntr`, and the set-based collection loader. 8 unit tests.            |
+| `rslib/src/concepts/service.rs` | Implements the generated `ConceptsService` trait on `Collection`; read-only queue re-ordering + mastery query. 3 unit tests (incl. read-only/undo assertion).      |
+| `pylib/tests/test_concepts.py`  | 1 Python test file, 3 tests: calls both RPCs through the backend on an in-memory collection; asserts undo state untouched.                                         |
 | `mcat/`                         | FR-2 taxonomy (`taxonomy.json`), `coverage.py`, fixtures, README. Fork data; no upstream overlap.                                                                  |
 | `qt/aqt/mcat/`                  | FR-5/6 deterministic Memory score (`memory_score.py`), Qt panel (`panel.py`), `integration.py` bridge, tests.                                                      |
 

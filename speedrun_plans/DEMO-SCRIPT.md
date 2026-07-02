@@ -22,8 +22,7 @@ just mcat-run-demo      # opens Anki against that demo profile
 
 **0:20 — The Rust engine change (60s). [20% of grade]**
 
-- Show `rslib/src/concepts/mod.rs` + `proto/anki/concepts.proto`: a new `ConceptsService` with
-`ConceptAwareQueue` + `ConceptMastery` RPCs; per-concept **NTR = topic_weight × weakness**.
+- Show `rslib/src/concepts/mod.rs` + `proto/anki/concepts.proto`: a new `ConceptsService` with `ConceptAwareQueuetest` + `ConceptMastery` RPCs; per-concept **NTR = topic_weight × weakness**.
 - Run `cargo test -p anki concepts::` → **11 passing**; `pytest pylib/tests/test_concepts.py` → **3 passing**.
 - Say why Rust: perf on 50k cards, ships to phone for free, type-safe proto, undo/integrity next
 to FSRS. Point at `test_concept_aware_queue_is_read_only` → **undo-safe, read-only**.
